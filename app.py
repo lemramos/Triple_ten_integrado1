@@ -8,7 +8,7 @@ car_data = pd.read_csv('vehicles_us.csv')
 # Encabezado de la aplicación
 st.header('Exploración de Anuncios de Venta de Coches')
 
-# Crear botones o casillas de verificación para generar los gráficos
+# Crear casillas de verificación para generar los gráficos
 build_histogram = st.checkbox('Construir un Histograma de Odómetro')
 build_scatter_plot = st.checkbox('Construir un Gráfico de Dispersión Precio vs. Año del Modelo')
 
@@ -26,5 +26,4 @@ if build_scatter_plot:
     fig_scatter = px.scatter(filtered_data, x="model_year", y="price", title="Precio vs. Año del Modelo", color="fuel")
     st.plotly_chart(fig_scatter, use_container_width=True)
 
-# Configuración de Streamlit para Render
-# No olvides agregar el archivo config.toml con las configuraciones indicadas a tu repositorio
+
